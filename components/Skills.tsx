@@ -1,34 +1,44 @@
+
 import React from 'react';
 import { 
   Code2, 
   Layout, 
   Database, 
-  Smartphone, 
+  Server,
   Figma, 
   Terminal, 
   GitBranch, 
-  Layers 
+  Layers,
+  Box,
+  Bot,
+  CheckSquare
 } from 'lucide-react';
-import { Skill } from '../types';
-
-const skills: Skill[] = [
-  { name: 'React', category: 'Frontend', icon: Code2 },
-  { name: 'Tailwind CSS', category: 'Styling', icon: Layout },
-  { name: 'TypeScript', category: 'Language', icon: Terminal },
-  { name: 'Node.js', category: 'Backend', icon: Database },
-  { name: 'Next.js', category: 'Framework', icon: Layers },
-  { name: 'Figma', category: 'Design', icon: Figma },
-  { name: 'Git', category: 'Version Control', icon: GitBranch },
-  { name: 'Responsive', category: 'Design', icon: Smartphone },
-];
+import { useLanguage } from '../context/LanguageContext';
 
 const Skills: React.FC = () => {
+  const { t } = useLanguage();
+
+  const skills = [
+    { name: 'ReactJS', category: t('cat_frontend'), icon: Code2 },
+    { name: 'Node.js', category: t('cat_backend'), icon: Server },
+    { name: 'MongoDB', category: t('cat_database'), icon: Database },
+    { name: 'C#', category: t('cat_language'), icon: Terminal },
+    { name: '.NET', category: t('cat_framework'), icon: Box },
+    { name: 'MySQL', category: t('cat_database'), icon: Database },
+    { name: 'Next.js', category: t('cat_framework'), icon: Layers },
+    { name: 'Figma', category: t('cat_design'), icon: Figma },
+    { name: 'Tailwind CSS', category: t('cat_styling'), icon: Layout },
+    { name: 'UiPath', category: t('cat_automation'), icon: Bot },
+    { name: 'Git', category: t('cat_version_control'), icon: GitBranch },
+    { name: 'Jira', category: t('cat_management'), icon: CheckSquare },
+  ];
+
   return (
     <section id="skills" className="py-24 px-6 border-t border-zinc-900">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">Essential Tools</h2>
-          <p className="text-zinc-400">The technologies I use to bring ideas to life.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">{t('skills_title')}</h2>
+          <p className="text-zinc-400">{t('skills_subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

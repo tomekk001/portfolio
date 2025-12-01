@@ -1,9 +1,12 @@
+
 import React, { useState } from 'react';
 import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const { t } = useLanguage();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -14,20 +17,9 @@ const Contact: React.FC = () => {
     setStatus('loading');
 
     try {
-      // Simulation of a backend call (since this is a browser preview)
-      // In production, this would point to your Node.js endpoint: /api/contact
+      // Simulation of a backend call
       await new Promise(resolve => setTimeout(resolve, 1500));
       
-      /* 
-      // Real implementation code:
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-      if (!response.ok) throw new Error('Failed');
-      */
-
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus('idle'), 3000);
@@ -42,23 +34,31 @@ const Contact: React.FC = () => {
         
         {/* Left Side: Info */}
         <div className="space-y-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">Let's work <br /> together.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">{t('contact_title_1')} <br /> {t('contact_title_2')}</h2>
           <p className="text-zinc-400 text-lg">
-            Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and ideas.
+            {t('contact_desc')}
           </p>
           
           <div className="pt-8">
-            <h4 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">Email</h4>
+            <h4 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">{t('contact_email_label')}</h4>
             <a href="mailto:hello@example.com" className="text-xl text-white hover:underline decoration-zinc-700 underline-offset-4">
-              tomekczyz001@gmail.com
+              hello@example.com
             </a>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">Socials</h4>
+            <h4 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">{t('contact_socials_label')}</h4>
             <div className="flex gap-4">
-              <a href="#" className="text-zinc-400 hover:text-white transition-colors">LinkedIn</a>
-              <a href="#" className="text-zinc-400 hover:text-white transition-colors">GitHub</a>
+              <a 
+                href="https://www.linkedin.com/in/tomasz-czy%C5%BC-45397b213/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-zinc-400 hover:text-white transition-colors"
+              >
+                LinkedIn
+              </a>
+              <a href="https://github.com/tomekk001" className="text-zinc-400 hover:text-white transition-colors">GitHub</a>
+              
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
         <div className="bg-zinc-900/30 p-8 rounded-2xl border border-zinc-800">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium text-zinc-400">Name</label>
+              <label htmlFor="name" className="text-sm font-medium text-zinc-400">{t('form_label_name')}</label>
               <input
                 type="text"
                 id="name"
@@ -76,12 +76,12 @@ const Contact: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
-                placeholder="Tomasz Czyż"
+                placeholder={t('form_placeholder_name')}
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-zinc-400">Email</label>
+              <label htmlFor="email" className="text-sm font-medium text-zinc-400">{t('form_label_email')}</label>
               <input
                 type="email"
                 id="email"
@@ -90,12 +90,12 @@ const Contact: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
-                placeholder="tomekczyz001@gmail.com"
+                placeholder={t('form_placeholder_email')}
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium text-zinc-400">Message</label>
+              <label htmlFor="message" className="text-sm font-medium text-zinc-400">{t('form_label_message')}</label>
               <textarea
                 id="message"
                 name="message"
@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full bg-zinc-900 border border-zinc-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors resize-none"
-                placeholder="Tell me about your project..."
+                placeholder={t('form_placeholder_message')}
               />
             </div>
 
@@ -122,12 +122,12 @@ const Contact: React.FC = () => {
               ) : status === 'success' ? (
                 <>
                   <CheckCircle size={20} />
-                  Message Sent
+                  {t('form_btn_success')}
                 </>
               ) : (
                 <>
                   <Send size={18} />
-                  Send Message
+                  {t('form_btn_send')}
                 </>
               )}
             </button>
@@ -135,7 +135,7 @@ const Contact: React.FC = () => {
             {status === 'error' && (
               <div className="flex items-center gap-2 text-red-400 text-sm mt-2">
                 <AlertCircle size={16} />
-                <span>Something went wrong. Please try again.</span>
+                <span>{t('form_error')}</span>
               </div>
             )}
           </form>
