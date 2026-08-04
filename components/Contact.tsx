@@ -41,8 +41,8 @@ const Contact: React.FC = () => {
           
           <div className="pt-8">
             <h4 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">{t('contact_email_label')}</h4>
-            <a href="mailto:hello@example.com" className="text-xl text-white hover:underline decoration-zinc-700 underline-offset-4">
-              hello@example.com
+            <a href="mailto:tomekczyz001@gmail.com" className="text-xl text-white hover:underline decoration-zinc-700 underline-offset-4">
+              tomekczyz001@gmail.com
             </a>
           </div>
 
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
             <h4 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-2">{t('contact_socials_label')}</h4>
             <div className="flex gap-4">
               <a 
-                href="https://www.linkedin.com/in/tomasz-czy%C5%BC-45397b213/" 
+                href="https://www.linkedin.com/in/tomasz-czy%C5%BC-34811335a/"
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-zinc-400 hover:text-white transition-colors"

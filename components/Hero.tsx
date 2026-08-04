@@ -11,12 +11,10 @@ const Hero: React.FC = () => {
       <div className="max-w-4xl mx-auto w-full space-y-8">
         
         {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900/50 border border-zinc-800 w-fit backdrop-blur-sm">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-          </span>
-          <span className="text-xs font-medium text-zinc-300 tracking-wide uppercase">{t('hero_status')}</span>
+        <div className="inline-flex items-center gap-2 w-fit font-mono text-xs border-l-2 border-green-500 pl-3 py-1">
+          <span className="text-zinc-500">~$</span>
+          <span className="text-zinc-300 tracking-wide">{t('hero_status')}</span>
+          <span className="cursor-blink inline-block w-[7px] h-3.5 bg-green-400 translate-y-[1px]"></span>
         </div>
 
         {/* Main Text */}
