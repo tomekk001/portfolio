@@ -35,3 +35,13 @@
         background: #3f3f46; 
       }
     
+/* Slow floating background glows */
+@keyframes float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(30px, 40px, 0); }
+}
+.animate-float { animation: float 14s ease-in-out infinite; }
+.animate-float-slow { animation: float 22s ease-in-out infinite reverse; }
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, .animate-float-slow, .cursor-blink { animation: none; }
+}

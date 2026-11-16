@@ -11,9 +11,13 @@ const Hero: React.FC = () => {
     <section id="hero" className="min-h-screen flex flex-col justify-center relative pt-24 pb-16 px-6 overflow-hidden">
       {/* Background: grid + glow */}
       <div aria-hidden className="absolute inset-0 -z-10 bg-grid [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
-      <div aria-hidden className="absolute -z-10 top-1/4 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full bg-emerald-500/10 blur-[120px]" />
+      <div aria-hidden className="absolute -z-10 -top-32 -left-32 w-[560px] h-[560px] rounded-full bg-emerald-500/15 blur-[130px] animate-float" />
+      <div aria-hidden className="absolute -z-10 top-1/3 -right-24 w-[520px] h-[520px] rounded-full bg-sky-500/15 blur-[130px] animate-float-slow" />
+      <div aria-hidden className="absolute -z-10 bottom-0 left-1/3 w-[420px] h-[420px] rounded-full bg-violet-500/10 blur-[130px] animate-float" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-40 -z-10 bg-gradient-to-t from-zinc-950 to-transparent" />
 
-      <div className="max-w-4xl mx-auto w-full space-y-8">
+      <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-[1fr_auto] gap-12 lg:gap-16 items-center">
+        <div className="space-y-8">
         {/* Status Badge */}
         <div className="inline-flex items-center gap-2 w-fit font-mono text-xs border-l-2 border-green-500 pl-3 py-1">
           <span className="text-zinc-500">~$</span>
@@ -74,6 +78,24 @@ const Hero: React.FC = () => {
             <a href="#contact" aria-label={t('hero_btn_contact')} className="hover:text-white transition-colors">
               <Mail size={22} />
             </a>
+          </div>
+        </div>
+        </div>
+
+        {/* Portrait */}
+        <div className="relative mx-auto lg:mx-0 order-first lg:order-last w-56 sm:w-64 lg:w-80">
+          <div aria-hidden className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-emerald-400/40 via-sky-400/20 to-violet-500/30 blur-2xl" />
+          <div className="relative rounded-[1.75rem] p-[2px] bg-gradient-to-br from-emerald-300/70 via-zinc-700 to-sky-400/60">
+            <img
+              src="/images/tomasz.jpg"
+              alt="Tomasz Czyż"
+              width={720}
+              height={900}
+              className="block w-full aspect-[4/5] object-cover rounded-[1.65rem] bg-zinc-900"
+            />
+          </div>
+          <div className="absolute -bottom-3 -right-3 sm:-right-5 px-3 py-1.5 font-mono text-xs text-emerald-300 bg-zinc-950/90 border border-zinc-800 rounded-full backdrop-blur">
+            z/OS · HLASM · JCL
           </div>
         </div>
       </div>

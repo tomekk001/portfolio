@@ -12,7 +12,7 @@ const AppContent: React.FC = () => {
   const { t } = useLanguage();
   
   return (
-    <div className="min-h-screen bg-zinc-950 text-white selection:bg-white/20">
+    <div className="min-h-screen bg-zinc-950 text-white selection:bg-white/20 relative">
       <Navbar />
       <main>
         <Hero />
