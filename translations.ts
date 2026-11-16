@@ -1,4 +1,3 @@
-
 export type Language = 'en' | 'pl';
 
 export const translations = {
@@ -6,6 +5,7 @@ export const translations = {
     // Navbar
     nav_home: 'Home',
     nav_skills: 'Skills',
+    nav_experience: 'Experience',
     nav_projects: 'Projects',
     nav_contact: 'Contact',
     nav_cv: 'CV',
@@ -13,51 +13,64 @@ export const translations = {
 
     // Hero
     hero_status: 'Available for work',
-    hero_title_role: 'Full Stack Developer',
-    hero_description: 'I am an engineer and passionate programmer focused on creating scalable web applications. While I specialize in web development, my skills extend beyond that scope. I also work as a mainframe developer (COBOL, HLASM, JCL, CICS, DB2, Xpediter). As a future Master of Engineering, I am dedicated to continuous learning and refining my craft, treating coding as my true passion.',
+    hero_greeting: "Hi, I'm Tomasz Czyż",
+    hero_title_role: 'Software Engineer',
+    hero_title_sub: 'Full Stack & Mainframe Developer',
+    hero_description: 'Master of Science in Computer Science with a business-driven mindset. I build scalable web applications and, as a Junior Mainframe Developer, work on core business systems on z/OS with HLASM, JCL, COBOL, CICS, DB2 and Xpediter. I focus on high-quality, performant solutions that deliver real-world value.',
     hero_btn_projects: 'View Projects',
+    hero_btn_contact: 'Get in touch',
 
     // Skills
-    skills_title: 'Essential Tools',
-    skills_subtitle: 'The technologies I use to bring ideas to life.',
-    cat_frontend: 'Frontend',
-    cat_backend: 'Backend',
-    cat_database: 'Database',
-    cat_language: 'Language',
-    cat_framework: 'Framework',
-    cat_design: 'Design',
-    cat_styling: 'Styling',
-    cat_automation: 'Automation',
-    cat_version_control: 'Version Control',
-    cat_management: 'Management',
-    mainframe_title: 'Mainframe Development',
-    mainframe_subtitle: 'Enterprise z/OS technologies I work with as a mainframe developer.',
-    cat_mf_language: 'Language',
-    cat_mf_assembler: 'Assembler',
-    cat_mf_jobcontrol: 'Job Control',
-    cat_mf_transaction: 'Transaction Server',
-    cat_mf_database: 'Database',
-    cat_mf_debugger: 'Debugger',
+    skills_title: 'Skills & Technologies',
+    skills_subtitle: 'The tools and technologies I use to bring ideas to life.',
+    skills_frontend: 'Frontend',
+    skills_backend: 'Backend & Languages',
+    skills_databases: 'Databases',
+    skills_tools: 'Tools & Cloud',
+    skills_design: 'Design & Automation',
+    skills_mainframe: 'Mainframe (z/OS)',
+
+    // Experience
+    exp_title: 'Experience & Education',
+    exp_subtitle: 'Where I have worked and what I have studied.',
+    exp_work: 'Professional experience',
+    exp_present: 'Present',
+    exp_deloitte_role: 'Junior Mainframe Developer',
+    exp_deloitte_desc: 'I design and optimize core business applications running in the z/OS ecosystem. I write and troubleshoot High Level Assembler (HLASM) code, manage execution flows with Job Control Language (JCL), and use SDSF for job monitoring and Xpediter for debugging. I also handle complex data transformations and packed decimal arithmetic to keep operations fast.',
+    exp_biznesport_role: 'Junior Fullstack Developer',
+    exp_biznesport_desc: 'I developed a marketplace platform for the Polish community in Denmark, implementing key features such as listing publication and search. I also optimized the application for SEO and ensured a responsive interface.',
+    exp_zf_role: 'RPA Developer (internship)',
+    exp_zf_desc: 'I took part in building and deploying automation solutions based on the UiPath REFramework. The RPA solutions I developed went live in production, improving process speed and stability.',
+    edu_title: 'Education',
+    edu_msc: 'Master of Science in Computer Science',
+    edu_msc_sub: 'Business Applications and Databases · Częstochowa University of Technology',
+    edu_eng: 'Computer Science Engineer',
+    edu_eng_sub: 'Internet Application Programming',
+    edu_tech: 'IT Technician (EE08, EE09)',
+    edu_tech_sub: 'Technical School in Działoszyn',
+    cert_title: 'Certificates & languages',
+    cert_ssis: 'SQL Server Integration Services (SSIS)',
+    cert_tsql: 'SQL Server Certification: Querying Data with Transact-SQL',
+    cert_ccna: 'Cisco CCNA Routing and Switching',
+    cert_english: 'English: B2',
 
     // Projects
     projects_title: 'Highlights',
     projects_subtitle: 'Selected projects that demonstrate my passion for building.',
-    
-    // Project Descriptions (Keys correspond to specific projects)
-    proj_nadwarcianskie_desc: 'A responsive website design created in WordPress and Elementor. The site was created for a company specializing in food processing and sales.',
-    proj_task_desc: 'Collaborative task manager featuring drag-and-drop kanban boards and team workspaces.',
-    proj_ai_desc: 'SaaS platform allowing users to generate and edit images using OpenAI\'s DALL-E API.',
-    proj_finance_desc: 'Personal finance application with budget planning, expense tracking, and visual reports.',
-    proj_learning_platform:'An online platform designed for finding tutors. It includes an online chat feature where tutors and students can communicate.',
-    proj_messagesProject: 'A full-stack CRUD application for message management built with Docker, Node.js, and NextJS. Features a modern UI using ShadCN and a robust backend with Sequelize ORM.',
+    project_open: 'Open project',
+
+    // Project Descriptions
+    proj_nadwarcianskie_desc: 'A responsive website created in WordPress and Elementor for a company specializing in food processing and sales.',
+    proj_learning_platform: 'An online platform for finding tutors, with a real-time chat where tutors and students can communicate.',
+    proj_messagesProject: 'A full-stack CRUD application for message management with a modern React UI and a Node.js backend using Sequelize ORM, containerized with Docker.',
 
     // Contact
     contact_title_1: "Let's work",
-    contact_title_2: "together.",
+    contact_title_2: 'together.',
     contact_desc: "Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and ideas.",
     contact_email_label: 'Email',
     contact_socials_label: 'Socials',
-    
+
     // Form
     form_label_name: 'Name',
     form_placeholder_name: 'John Doe',
@@ -72,12 +85,13 @@ export const translations = {
 
     // Footer
     footer_rights: 'All rights reserved.',
-    footer_built: 'Built with React, Tailwind & Node.js'
+    footer_built: 'Built with React, Tailwind & Vite'
   },
   pl: {
     // Navbar
     nav_home: 'Start',
     nav_skills: 'Umiejętności',
+    nav_experience: 'Doświadczenie',
     nav_projects: 'Projekty',
     nav_contact: 'Kontakt',
     nav_cv: 'CV',
@@ -85,49 +99,61 @@ export const translations = {
 
     // Hero
     hero_status: 'Dostępny do współpracy',
-    hero_title_role: 'Frontend Developer',
-    hero_title_sub: '& UI/UX Designer.',
-    hero_description: 'Jestem inżynierem i programistą z pasją do tworzenia skalowalnych aplikacji. Choć skupiam się na technologiach webowych, moje umiejętności wykraczają poza tę dziedzinę. Pracuję także jako programista mainframe (COBOL, HLASM, JCL, CICS, DB2, Xpediter). Jako przyszły magister inżynier, nieustannie poszerzam wiedzę, traktując programowanie nie tylko jako pracę, ale przede wszystkim jako pasję.',
-    hero_btn_projects: 'Zobacz Projekty',
+    hero_greeting: 'Cześć, jestem Tomasz Czyż',
+    hero_title_role: 'Software Engineer',
+    hero_title_sub: 'Full Stack & Mainframe Developer',
+    hero_description: 'Magister informatyki z biznesowym podejściem. Tworzę skalowalne aplikacje webowe, a jako Junior Mainframe Developer pracuję przy kluczowych systemach biznesowych na z/OS z użyciem HLASM, JCL, COBOL, CICS, DB2 i Xpeditera. Stawiam na wysoką jakość i wydajność rozwiązań, które dają realną wartość.',
+    hero_btn_projects: 'Zobacz projekty',
+    hero_btn_contact: 'Skontaktuj się',
 
     // Skills
-    skills_title: 'Narzędzia',
-    skills_subtitle: 'Technologie, których używam do realizacji pomysłów.',
-    cat_frontend: 'Frontend',
-    cat_backend: 'Backend',
-    cat_database: 'Baza Danych',
-    cat_language: 'Język',
-    cat_framework: 'Framework',
-    cat_design: 'Design',
-    cat_styling: 'Stylowanie',
-    cat_automation: 'Automatyzacja',
-    cat_version_control: 'Kontrola Wersji',
-    cat_management: 'Zarządzanie',
-    mainframe_title: 'Mainframe Development',
-    mainframe_subtitle: 'Technologie korporacyjne z/OS, z którymi pracuję jako programista mainframe.',
-    cat_mf_language: 'Język',
-    cat_mf_assembler: 'Assembler',
-    cat_mf_jobcontrol: 'Sterowanie zadaniami',
-    cat_mf_transaction: 'Serwer transakcji',
-    cat_mf_database: 'Baza Danych',
-    cat_mf_debugger: 'Debugger',
+    skills_title: 'Umiejętności i technologie',
+    skills_subtitle: 'Narzędzia i technologie, których używam do realizacji pomysłów.',
+    skills_frontend: 'Frontend',
+    skills_backend: 'Backend i języki',
+    skills_databases: 'Bazy danych',
+    skills_tools: 'Narzędzia i chmura',
+    skills_design: 'Design i automatyzacja',
+    skills_mainframe: 'Mainframe (z/OS)',
+
+    // Experience
+    exp_title: 'Doświadczenie i edukacja',
+    exp_subtitle: 'Gdzie pracowałem i czego się uczyłem.',
+    exp_work: 'Doświadczenie zawodowe',
+    exp_present: 'obecnie',
+    exp_deloitte_role: 'Junior Mainframe Developer',
+    exp_deloitte_desc: 'Projektuję i optymalizuję kluczowe aplikacje biznesowe działające w ekosystemie z/OS. Piszę i diagnozuję kod w High Level Assembler (HLASM), zarządzam przepływem wykonania w Job Control Language (JCL), korzystam z SDSF do monitorowania zadań i z Xpeditera do debugowania. Zajmuję się też złożonymi transformacjami danych i arytmetyką packed decimal, aby zapewnić wysoką wydajność.',
+    exp_biznesport_role: 'Junior Fullstack Developer',
+    exp_biznesport_desc: 'Rozwijałem platformę marketplace dla Polonii w Danii, wdrażając kluczowe funkcje, takie jak publikowanie ogłoszeń i wyszukiwarka. Optymalizowałem też aplikację pod kątem SEO i dbałem o responsywność interfejsu.',
+    exp_zf_role: 'RPA Developer (staż)',
+    exp_zf_desc: 'Brałem udział w tworzeniu i wdrażaniu automatyzacji opartych na UiPath REFramework. Stworzone przeze mnie rozwiązania RPA trafiły na produkcję i poprawiły szybkość oraz stabilność procesów.',
+    edu_title: 'Edukacja',
+    edu_msc: 'Magister inżynier informatyki',
+    edu_msc_sub: 'Aplikacje biznesowe i bazy danych · Politechnika Częstochowska',
+    edu_eng: 'Inżynier informatyki',
+    edu_eng_sub: 'Programowanie aplikacji internetowych',
+    edu_tech: 'Technik informatyk (EE08, EE09)',
+    edu_tech_sub: 'Zespół Szkół Technicznych w Działoszynie',
+    cert_title: 'Certyfikaty i języki',
+    cert_ssis: 'SQL Server Integration Services (SSIS)',
+    cert_tsql: 'Certyfikat SQL Server: Querying Data with Transact-SQL',
+    cert_ccna: 'Cisco CCNA Routing and Switching',
+    cert_english: 'Angielski: B2',
 
     // Projects
-    projects_title: 'Wybrane Projekty',
+    projects_title: 'Wybrane projekty',
     projects_subtitle: 'Projekty, które najlepiej pokazują moją pasję do tworzenia.',
+    project_open: 'Otwórz projekt',
 
     // Project Descriptions
-    proj_nadwarcianskie_desc: 'Responsywna strona internetowa stworzona w WordPress i Elementorze. Witryna powstała dla firmy specjalizującej się w przetwórstwie i sprzedaży żywności.',
-    proj_task_desc: 'Aplikacja do zarządzania zadaniami z tablicami kanban drag-and-drop i przestrzeniami dla zespołów.',
-    proj_ai_desc: 'Platforma SaaS umożliwiająca generowanie i edycję obrazów przy użyciu API OpenAI DALL-E.',
-    proj_finance_desc: 'Aplikacja do finansów osobistych z planowaniem budżetu, śledzeniem wydatków i raportami wizualnymi.',
-    proj_learning_platform:'Platforma internetowa online stworzona do znajdowania korepetycji. Zawiera czat internetowy gdzie może komunikowac się nauczyciel z uczniem',
-    proj_messagesProject: 'Pełnowymiarowa aplikacja CRUD do zarządzania wiadomościami zbudowana w oparciu o Docker, Node.js i NextJS. Oferuje nowoczesny interfejs użytkownika z wykorzystaniem ShadCN i solidne zaplecze z systemem ORM Sequelize',
+    proj_nadwarcianskie_desc: 'Responsywna strona internetowa stworzona w WordPress i Elementorze dla firmy specjalizującej się w przetwórstwie i sprzedaży żywności.',
+    proj_learning_platform: 'Platforma internetowa do znajdowania korepetytorów z czatem w czasie rzeczywistym, na którym nauczyciel może komunikować się z uczniem.',
+    proj_messagesProject: 'Aplikacja full-stack CRUD do zarządzania wiadomościami z nowoczesnym interfejsem w React i backendem w Node.js z ORM Sequelize, uruchamiana w Dockerze.',
 
     // Contact
-    contact_title_1: "Stwórzmy coś",
-    contact_title_2: "razem.",
-    contact_desc: "Masz pomysł na projekt lub po prostu chcesz się przywitać? Jestem zawsze otwarty na nowe możliwości i dyskusje.",
+    contact_title_1: 'Stwórzmy coś',
+    contact_title_2: 'razem.',
+    contact_desc: 'Masz pomysł na projekt lub po prostu chcesz się przywitać? Jestem zawsze otwarty na nowe możliwości i dyskusje.',
     contact_email_label: 'Email',
     contact_socials_label: 'Social Media',
 
@@ -138,13 +164,13 @@ export const translations = {
     form_placeholder_email: 'jan@przyklad.pl',
     form_label_message: 'Wiadomość',
     form_placeholder_message: 'Opisz swój projekt...',
-    form_btn_send: 'Wyślij Wiadomość',
+    form_btn_send: 'Wyślij wiadomość',
     form_btn_sending: 'Wysyłanie...',
-    form_btn_success: 'Wiadomość Wysłana',
+    form_btn_success: 'Wiadomość wysłana',
     form_error: 'Coś poszło nie tak. Spróbuj ponownie.',
 
     // Footer
     footer_rights: 'Wszelkie prawa zastrzeżone.',
-    footer_built: 'Zbudowane w React, Tailwind i Node.js'
+    footer_built: 'Zbudowane w React, Tailwind i Vite'
   }
 };

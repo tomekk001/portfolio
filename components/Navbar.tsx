@@ -19,6 +19,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { label: t('nav_home'), href: '#hero' },
     { label: t('nav_skills'), href: '#skills' },
+    { label: t('nav_experience'), href: '#experience' },
     { label: t('nav_projects'), href: '#projects' },
     { label: t('nav_contact'), href: '#contact' },
   ];

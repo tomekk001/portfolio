@@ -2,6 +2,7 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import Reveal from './Reveal';
 
 const Projects: React.FC = () => {
   const { t } = useLanguage();
@@ -28,28 +29,21 @@ const Projects: React.FC = () => {
       tags: ["WordPress", "Elementor", "Web Design", "UI/UX"],
       link: "https://nadwarcianskiespecjaly.pl/",
       image: "/images/nadwarcianskie.jpg"
-    },
-    {
-      title: "In progress...",
-      description: t('proj_finance_desc'),
-      tags: ["Node.js", "Next.js", "SQL", "Docker", "Stripe", "Git"],
-      link: "#",
-      image: "https://picsum.photos/600/400?random=4"
     }
   ];
 
   return (
     <section id="projects" className="py-24 px-6 border-t border-zinc-900 bg-zinc-900/10">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
+        <Reveal className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">{t('projects_title')}</h2>
           <p className="text-zinc-400">{t('projects_subtitle')}</p>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, i) => (
+            <Reveal key={project.title} delay={i * 80} className="h-full">
             <a 
-              key={project.title}
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -71,7 +65,7 @@ const Projects: React.FC = () => {
                   <ExternalLink size={20} className="text-zinc-500 group-hover:text-white transition-colors" />
                 </div>
                 
-                <p className="text-zinc-400 text-sm mb-6 line-clamp-3 flex-grow">
+                <p className="text-zinc-400 text-sm mb-6 line-clamp-4 flex-grow">
                   {project.description}
                 </p>
 
@@ -87,6 +81,7 @@ const Projects: React.FC = () => {
                 </div>
               </div>
             </a>
+            </Reveal>
           ))}
         </div>
       </div>
