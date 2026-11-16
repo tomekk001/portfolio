@@ -84,17 +84,19 @@ const Hero: React.FC = () => {
 
         {/* Portrait */}
         <div className="relative mx-auto lg:mx-0 order-first lg:order-last w-56 sm:w-64 lg:w-80">
-          <div aria-hidden className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-emerald-400/40 via-sky-400/20 to-violet-500/30 blur-2xl" />
-          <div className="relative rounded-[1.75rem] p-[2px] bg-gradient-to-br from-emerald-300/70 via-zinc-700 to-sky-400/60">
-            <img
-              src="/images/tomasz.jpg"
-              alt="Tomasz Czyż"
-              width={720}
-              height={900}
-              className="block w-full aspect-[4/5] object-cover rounded-[1.65rem] bg-zinc-900"
-            />
+          <div aria-hidden className="absolute -inset-6 rounded-full bg-gradient-to-br from-emerald-400/40 via-sky-400/25 to-violet-500/30 blur-3xl" />
+          <div className="relative aspect-square rounded-full p-[3px] bg-gradient-to-br from-emerald-300/80 via-zinc-700 to-sky-400/70">
+            <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-b from-zinc-800 via-zinc-900 to-zinc-950">
+              <img
+                src="/images/tomasz.webp"
+                alt="Tomasz Czyż"
+                width={720}
+                height={720}
+                className="block w-full h-full object-cover"
+              />
+            </div>
           </div>
-          <div className="absolute -bottom-3 -right-3 sm:-right-5 px-3 py-1.5 font-mono text-xs text-emerald-300 bg-zinc-950/90 border border-zinc-800 rounded-full backdrop-blur">
+          <div className="absolute bottom-2 -right-2 sm:-right-6 px-3 py-1.5 font-mono text-xs text-emerald-300 bg-zinc-950/90 border border-zinc-800 rounded-full backdrop-blur">
             z/OS · HLASM · JCL
           </div>
         </div>
