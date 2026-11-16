@@ -11,7 +11,12 @@ import {
   Layers,
   Box,
   Bot,
-  CheckSquare
+  CheckSquare,
+  Cpu,
+  FileCode2,
+  Workflow,
+  Network,
+  Bug
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -33,6 +38,15 @@ const Skills: React.FC = () => {
     { name: 'Jira', category: t('cat_management'), icon: CheckSquare },
   ];
 
+  const mainframeSkills = [
+    { name: 'COBOL', category: t('cat_mf_language'), icon: FileCode2 },
+    { name: 'HLASM', category: t('cat_mf_assembler'), icon: Cpu },
+    { name: 'JCL', category: t('cat_mf_jobcontrol'), icon: Workflow },
+    { name: 'CICS', category: t('cat_mf_transaction'), icon: Network },
+    { name: 'DB2', category: t('cat_mf_database'), icon: Database },
+    { name: 'Xpediter', category: t('cat_mf_debugger'), icon: Bug },
+  ];
+
   return (
     <section id="skills" className="py-24 px-6 border-t border-zinc-900">
       <div className="max-w-6xl mx-auto">
@@ -43,6 +57,28 @@ const Skills: React.FC = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {skills.map((skill) => (
+            <div 
+              key={skill.name} 
+              className="group p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl hover:border-zinc-600 hover:bg-zinc-900/50 transition-all duration-300 flex flex-col items-start gap-4"
+            >
+              <div className="p-3 bg-zinc-900 rounded-lg border border-zinc-800 text-zinc-300 group-hover:text-white group-hover:border-zinc-600 transition-colors">
+                <skill.icon size={24} />
+              </div>
+              <div>
+                <h3 className="text-white font-medium">{skill.name}</h3>
+                <p className="text-xs text-zinc-500 mt-1">{skill.category}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-20 mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">{t('mainframe_title')}</h2>
+          <p className="text-zinc-400">{t('mainframe_subtitle')}</p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {mainframeSkills.map((skill) => (
             <div 
               key={skill.name} 
               className="group p-6 bg-zinc-900/30 border border-zinc-800 rounded-xl hover:border-zinc-600 hover:bg-zinc-900/50 transition-all duration-300 flex flex-col items-start gap-4"

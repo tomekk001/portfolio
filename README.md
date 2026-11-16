@@ -8,6 +8,8 @@ A dark-themed, minimalist personal portfolio site with a sticky navbar, hero sec
 
 ## Tech Stack
 
+- **Mainframe:** COBOL, HLASM, JCL, CICS, DB2, Xpediter
+
 - **Frontend:** React 18, TypeScript, Vite, `lucide-react` icons
 - **Backend:** Node.js, Express, Nodemailer (contact form email delivery)
 - **i18n:** Custom `LanguageContext` with EN/PL translations ([translations.ts](translations.ts))
@@ -54,4 +56,4 @@ npm run build   # type-check and build the SPA into dist/
 npm run start   # start the Express server (serves dist/ and /api/contact)
 ```
 
-See [deployment_instructions.md](deployment_instructions.md) for deploying to Railway/Render/Vercel.
+See [deployment_instructions.md](deployment_instructions.md) for the GitHub Pages deployment setup.

@@ -14,7 +14,7 @@ export const translations = {
     // Hero
     hero_status: 'Available for work',
     hero_title_role: 'Full Stack Developer',
-    hero_description: 'I am an engineer and passionate programmer focused on creating scalable web applications. While I specialize in web development, my skills extend beyond that scope. As a future Master of Engineering, I am dedicated to continuous learning and refining my craft, treating coding as my true passion.',
+    hero_description: 'I am an engineer and passionate programmer focused on creating scalable web applications. While I specialize in web development, my skills extend beyond that scope. I also work as a mainframe developer (COBOL, HLASM, JCL, CICS, DB2, Xpediter). As a future Master of Engineering, I am dedicated to continuous learning and refining my craft, treating coding as my true passion.',
     hero_btn_projects: 'View Projects',
 
     // Skills
@@ -30,6 +30,14 @@ export const translations = {
     cat_automation: 'Automation',
     cat_version_control: 'Version Control',
     cat_management: 'Management',
+    mainframe_title: 'Mainframe Development',
+    mainframe_subtitle: 'Enterprise z/OS technologies I work with as a mainframe developer.',
+    cat_mf_language: 'Language',
+    cat_mf_assembler: 'Assembler',
+    cat_mf_jobcontrol: 'Job Control',
+    cat_mf_transaction: 'Transaction Server',
+    cat_mf_database: 'Database',
+    cat_mf_debugger: 'Debugger',
 
     // Projects
     projects_title: 'Highlights',
@@ -79,7 +87,7 @@ export const translations = {
     hero_status: 'Dostępny do współpracy',
     hero_title_role: 'Frontend Developer',
     hero_title_sub: '& UI/UX Designer.',
-    hero_description: 'Jestem inżynierem i programistą z pasją do tworzenia skalowalnych aplikacji. Choć skupiam się na technologiach webowych, moje umiejętności wykraczają poza tę dziedzinę. Jako przyszły magister inżynier, nieustannie poszerzam wiedzę, traktując programowanie nie tylko jako pracę, ale przede wszystkim jako pasję.',
+    hero_description: 'Jestem inżynierem i programistą z pasją do tworzenia skalowalnych aplikacji. Choć skupiam się na technologiach webowych, moje umiejętności wykraczają poza tę dziedzinę. Pracuję także jako programista mainframe (COBOL, HLASM, JCL, CICS, DB2, Xpediter). Jako przyszły magister inżynier, nieustannie poszerzam wiedzę, traktując programowanie nie tylko jako pracę, ale przede wszystkim jako pasję.',
     hero_btn_projects: 'Zobacz Projekty',
 
     // Skills
@@ -95,6 +103,14 @@ export const translations = {
     cat_automation: 'Automatyzacja',
     cat_version_control: 'Kontrola Wersji',
     cat_management: 'Zarządzanie',
+    mainframe_title: 'Mainframe Development',
+    mainframe_subtitle: 'Technologie korporacyjne z/OS, z którymi pracuję jako programista mainframe.',
+    cat_mf_language: 'Język',
+    cat_mf_assembler: 'Assembler',
+    cat_mf_jobcontrol: 'Sterowanie zadaniami',
+    cat_mf_transaction: 'Serwer transakcji',
+    cat_mf_database: 'Baza Danych',
+    cat_mf_debugger: 'Debugger',
 
     // Projects
     projects_title: 'Wybrane Projekty',

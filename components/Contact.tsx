@@ -17,9 +17,23 @@ const Contact: React.FC = () => {
     setStatus('loading');
 
     try {
-      // Simulation of a backend call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      const accessKey = import.meta.env.VITE_WEB3FORMS_KEY;
+      if (!accessKey) throw new Error('Missing VITE_WEB3FORMS_KEY');
+
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `Nowa wiadomość z Portfolio od: ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+      const data = await res.json();
+      if (!data.success) throw new Error(data.message || 'Request failed');
+
       setStatus('success');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus('idle'), 3000);
